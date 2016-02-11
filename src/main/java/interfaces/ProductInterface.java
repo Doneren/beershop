@@ -12,4 +12,8 @@ public interface ProductInterface {
 
     double getQuantity();
 
+    double getSum();
+
+    void setSum();
+
 }

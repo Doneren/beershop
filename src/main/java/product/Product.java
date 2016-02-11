@@ -4,35 +4,33 @@ import interfaces.ProductInterface;
 
 public abstract class Product implements ProductInterface{
 
-    private int price;
-    private String name;
-    private double quantity;
+    protected int price;
+    protected String name;
+    protected double quantity;
+    private double sum;
+    protected int id;
 
-    public Product(){
+    public Product(String name, double quantity, int price){
 
     }
 
-    public int getPrice() {
-        return price;
+    public abstract int getPrice();
+
+    public abstract void setPrice(int price);
+
+    public abstract String getName();
+
+    public abstract void setName(String name);
+
+    public abstract double getQuantity();
+
+    public abstract void setQuantity(double quantity);
+
+    public void setSum (){
+        sum = quantity*price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
+    public double getSum() {
+        return sum;
     }
 }
