@@ -4,13 +4,17 @@ public class Drink extends Product{
 // class includes beer, lemonade, juice
 
 
-    public Drink(String name, double quantity, int price) {
-        super(name, quantity, price);
+    public Drink() {
+    }
+
+    public Drink(int price, String name, double quantity) {
+        super(price, name, quantity);
+        setSum();
     }
 
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.name=name;
     }
     @Override
     public String getName() {
@@ -36,4 +40,5 @@ public class Drink extends Product{
     public int getPrice() {
         return price;
     }
-}
+
+    }

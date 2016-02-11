@@ -7,11 +7,16 @@ public abstract class Product implements ProductInterface{
     protected int price;
     protected String name;
     protected double quantity;
-    private double sum;
+    protected double sum;
     protected int id;
 
-    public Product(String name, double quantity, int price){
+    public Product() {
+    }
 
+    public Product(int price, String name, double quantity) {
+        this.price = price;
+        this.name = name;
+        this.quantity = quantity;
     }
 
     public abstract int getPrice();

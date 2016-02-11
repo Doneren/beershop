@@ -6,10 +6,6 @@ public class Food extends Product{
 //fish and crackers
 
 
-    public Food(String name, double quantity, int price) {
-        super(name, quantity, price);
-    }
-
     @Override
     public void setName(String name) {
         this.name = name;
