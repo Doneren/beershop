@@ -9,7 +9,7 @@ public class Delivery extends SalesDepartment{
 
     public void deliveryStatement(){
         if (assemblyReady.acceptAssembly()){
-            System.out.println("Goods in transit."+getPosition()+" - "+getName()+" address: "+);
+            System.out.println("Goods in transit."+getPosition()+" - "+getName()+" address: ");
         }
     }
 
