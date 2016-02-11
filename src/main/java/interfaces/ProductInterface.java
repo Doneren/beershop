@@ -16,4 +16,8 @@ public interface ProductInterface {
 
     void setSum();
 
+    void setProductType(String ProductType);
+
+    String getProductType();
+
 }
