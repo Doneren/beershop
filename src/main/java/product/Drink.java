@@ -21,4 +21,9 @@ public class Drink extends Product{
     public void setSum() {
        sum = quantity*price;
     }
+
+    @Override
+    public String toString() {
+        return productType+" "+name+" "+price+" "+quantity;
+    }
 }

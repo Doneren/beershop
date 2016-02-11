@@ -15,6 +15,7 @@ public abstract class Product implements ProductInterface{
 
     public Product(int price, String productType, String name, double quantity) {
         this.price = price;
+        this.productType=productType;
         this.name = name;
         this.quantity = quantity;
     }
