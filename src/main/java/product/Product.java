@@ -2,7 +2,7 @@ package product;
 
 import interfaces.ProductInterface;
 
-public abstract class Product implements ProductInterface{
+public abstract class Product implements ProductInterface {
 
     protected int price;
     protected String name;
@@ -15,21 +15,21 @@ public abstract class Product implements ProductInterface{
 
     public Product(int price, String productType, String name, double quantity) {
         this.price = price;
-        this.productType=productType;
+        this.productType = productType;
         this.name = name;
         this.quantity = quantity;
     }
 
 
     public void setName(String name) {
-        this.name=name;
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-       public void setQuantity(double quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 
@@ -56,7 +56,7 @@ public abstract class Product implements ProductInterface{
         return productType;
     }
 
-    public abstract void setSum ();
+    public abstract void setSum();
 
     public abstract double getSum();
 }
