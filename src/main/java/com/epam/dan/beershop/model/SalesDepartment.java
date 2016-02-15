@@ -1,6 +1,6 @@
-package salesDepartment;
+package com.epam.dan.beershop.model;
 
-import interfaces.SalesDepartmentInterface;
+import com.epam.dan.beershop.interfaces.SalesDepartmentInterface;
 
 public class SalesDepartment implements SalesDepartmentInterface{
     private String name;

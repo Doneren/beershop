@@ -1,4 +1,4 @@
-package interfaces;
+package com.epam.dan.beershop.interfaces;
 
 
 public interface SalesDepartmentInterface {

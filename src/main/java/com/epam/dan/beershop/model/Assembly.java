@@ -1,6 +1,4 @@
-package salesDepartment;
-
-import purchase.Order;
+package com.epam.dan.beershop.model;
 
 public class Assembly extends SalesDepartment {
 

@@ -1,9 +1,6 @@
-package salesDepartment;
+package com.epam.dan.beershop.model;
 
-import client.Client;
-import purchase.Order;
-
-public class Delivery extends SalesDepartment{
+public class Delivery extends SalesDepartment {
 
     Assembly assemblyReady = new Assembly();
 
