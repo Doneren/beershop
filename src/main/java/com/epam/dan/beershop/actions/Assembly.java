@@ -1,19 +1,21 @@
-package com.epam.dan.beershop.model;
+package com.epam.dan.beershop.actions;
 
-public class Assembly extends SalesDepartment {
+import com.epam.dan.beershop.model.Order;
+
+public class Assembly{
 
     Order order = new Order();
 
     public boolean acceptAssembly() {
-        return order.isAcceptOrder();
+        return order.isAcceptedOrder();
     }
 
 
-    public void assemblingOrder() {
+    /*public void assemblingOrder() {
         if (acceptAssembly()) {
             System.out.println("Order assembled by " + getPosition() + " " + getName() + " and ready to delivery.");
             }
-    }
+    }*/
 
 
 }

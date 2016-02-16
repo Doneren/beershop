@@ -1,22 +1,21 @@
 package com.epam.dan.beershop.model;
 
-import com.epam.dan.beershop.model.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private boolean acceptOrder;
+    private boolean acceptedOrder;
     private double quantity; //quantity of ordered type of product
+    private String deliveryAdress;
 
     List<Product> productList = new ArrayList<Product>();
 
-    public boolean isAcceptOrder() {
-        return acceptOrder;
+    public boolean isAcceptedOrder() {
+        return acceptedOrder;
     }
 
-    public void setAcceptOrder(boolean acceptOrder) {
-        this.acceptOrder = acceptOrder;
+    public void setAcceptedOrder(boolean acceptedOrder) {
+        this.acceptedOrder = acceptedOrder;
     }
 
 
@@ -36,6 +35,11 @@ public class Order {
         this.productList = productList;
     }
 
+    public String getDeliveryAdress() {
+        return deliveryAdress;
+    }
 
-
+    public void setDeliveryAdress(String deliveryAdress) {
+        this.deliveryAdress = deliveryAdress;
+    }
 }
