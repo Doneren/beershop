@@ -48,7 +48,7 @@ public class ClientService {
     }
 
     public void idAssignment (){
-        int maxIdValueInDatabase;
+        int maxIdValueInDatabase=0;
         // gets maximal id of registered client from database
         id=maxIdValueInDatabase+1;
         setId(id);
