@@ -1,5 +1,8 @@
 package com.epam.dan.beershop.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
 
     private double price;
@@ -74,7 +77,6 @@ public class Product {
                 "price=" + getPrice() +
                 ", name='" + getName() + '\'' +
                 ", type=" + getType() +
-                ", unit=" + getUnit() +
-                '}';
+                ", unit=" + getUnit() ;
     }
 }

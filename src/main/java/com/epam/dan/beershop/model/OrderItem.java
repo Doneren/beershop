@@ -1,43 +1,63 @@
 package com.epam.dan.beershop.model;
 
-import com.sun.xml.internal.ws.binding.FeatureListUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderItem {
     private double quantity;
+    String s;
 
-    public OrderItem(Product product, double quantity){
+    public OrderItem(double quantity){
 
+        this.quantity=quantity;
 
     }
 
+    public OrderItem(String s){
+
+        this.s = s;
+
+    }
     public OrderItem(){
 
     }
 
-    public void productArrayList () {
+
+
+    public void createProductList() {
 
         Product product1 = new Product("beer", "Carlsberg", 390.0, "liter");
 
-        OrderItem wer = new OrderItem(product1, getQuantity());
+        List<Product> productList = new ArrayList<Product>();
 
-        List<OrderItem> productsList = new ArrayList<OrderItem>();
+        productList.add(product1);
 
-        productsList.add(wer);
+        s = product1.toString() + new OrderItem(getQuantity()).toString();
+
+        System.out.println(s);
 
 
-        for (OrderItem product : productsList) {
+    }
+
+    public void createOrderItemList (){
+        OrderItem wer = new OrderItem(s);
+
+        List<String> productsList1 = new ArrayList<String>();
+
+        productsList1.add(s);
+
+        for (String product : productsList1) {
             System.out.println(product);
-        }
+       }
     }
 
 
-    /*public String to1String(){
-        OrderItem qwe = new OrderItem();
-        return qwe.toString()+ "Quantity: "+getQuantity();
-    }*/
+
+    @Override
+    public String toString() {
+        return ", quantity=" + getQuantity() +
+                '}';
+    }
 
     public double getQuantity() {
         return quantity;
@@ -47,4 +67,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
+    public String getS() {
+        return s;
+    }
+
+    public void setS(String s) {
+        this.s = s;
+    }
 }
