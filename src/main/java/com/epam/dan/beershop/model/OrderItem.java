@@ -7,21 +7,21 @@ public class OrderItem {
     private double quantity;
     String s;
 
-    public OrderItem(double quantity){
+    public OrderItem(double quantity) {
 
-        this.quantity=quantity;
+        this.quantity = quantity;
 
     }
 
-    public OrderItem(String s){
+    public OrderItem(String s) {
 
         this.s = s;
 
     }
-    public OrderItem(){
+
+    public OrderItem() {
 
     }
-
 
 
     public void createProductList() {
@@ -39,8 +39,7 @@ public class OrderItem {
 
     }
 
-    public void createOrderItemList (){
-        OrderItem wer = new OrderItem(s);
+    public void createOrderItemList() {
 
         List<String> productsList1 = new ArrayList<String>();
 
@@ -48,9 +47,8 @@ public class OrderItem {
 
         for (String product : productsList1) {
             System.out.println(product);
-       }
+        }
     }
-
 
 
     @Override
