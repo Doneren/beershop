@@ -1,5 +1,5 @@
 package com.epam.dan.beershop.model;
 
-public class Client{
+public class Client extends BaseEntity{
 
 }

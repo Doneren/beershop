@@ -3,7 +3,7 @@ package com.epam.dan.beershop.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product {
+public class Product extends BaseEntity{
 
     private double price;
     private String name;
@@ -23,7 +23,12 @@ public class Product {
 
     Unit unit;
 
-    public Product (String productType, String name, double price, String unit){
+    public Product (Integer productId, String productType, String name, double price, String unit){
+        if (productId != null){
+        setId(productId);}
+        else {System.out.println("Wrong product id!");
+        }
+
         this.name = name;
         this.price = price;
         if (productType == "beer"){type=Type.BEER;}
@@ -70,11 +75,21 @@ public class Product {
         return price;
     }
 
+    @Override
+    public void setId(Integer id) {
+        super.setId(id);
+    }
+
+    @Override
+    public Integer getId() {
+        return super.getId();
+    }
 
     @Override
     public String toString() {
-        return "Product{" +
-                "price=" + getPrice() +
+        return "Product:" +
+                "id=" + getId() +
+                ", price=" + getPrice() +
                 ", name='" + getName() + '\'' +
                 ", type=" + getType() +
                 ", unit=" + getUnit() ;

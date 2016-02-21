@@ -2,7 +2,7 @@ package com.epam.dan.beershop.model;
 
 import com.epam.dan.beershop.actions.Assembly;
 
-public class DeliveryDepartment extends SalesDepartment {
+public class DeliveryDepartment extends Employee{
 
     Assembly assemblyReady = new Assembly();
     Order delivery = new Order();

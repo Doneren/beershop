@@ -1,27 +1,7 @@
 package com.epam.dan.beershop.model;
 
-import com.epam.dan.beershop.interfaces.SalesDepartmentInterface;
+public class SalesDepartment extends Employee{
 
-public class SalesDepartment implements SalesDepartmentInterface{
-    private String name;
-    private String position;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
 
 
 }

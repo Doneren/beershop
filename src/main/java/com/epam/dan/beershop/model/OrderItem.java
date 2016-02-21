@@ -3,7 +3,7 @@ package com.epam.dan.beershop.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderItem {
+public class OrderItem extends Order{
     private double quantity;
     String s;
 
@@ -26,7 +26,7 @@ public class OrderItem {
 
     public void createProductList() {
 
-        Product product1 = new Product("beer", "Carlsberg", 390.0, "liter");
+        Product product1 = new Product(101, "beer", "Carlsberg", 390.0, "liter");
 
         List<Product> productList = new ArrayList<Product>();
 
@@ -39,22 +39,9 @@ public class OrderItem {
 
     }
 
-    public void createOrderItemList() {
-
-        List<String> productsList1 = new ArrayList<String>();
-
-        productsList1.add(s);
-
-        for (String product : productsList1) {
-            System.out.println(product);
-        }
-    }
-
-
     @Override
     public String toString() {
-        return ", quantity=" + getQuantity() +
-                '}';
+        return ", quantity=" + getQuantity();
     }
 
     public double getQuantity() {
