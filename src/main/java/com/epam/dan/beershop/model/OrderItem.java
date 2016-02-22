@@ -3,9 +3,9 @@ package com.epam.dan.beershop.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderItem extends Order{
+public class OrderItem extends BaseEntity{
     private double quantity;
-    String s;
+   // private String s;
 
     public OrderItem(double quantity) {
 
@@ -13,13 +13,8 @@ public class OrderItem extends Order{
 
     }
 
-    public OrderItem(String s) {
-
-        this.s = s;
-
-    }
-
     public OrderItem() {
+
 
     }
 
@@ -32,9 +27,11 @@ public class OrderItem extends Order{
 
         productList.add(product1);
 
-        s = product1.toString() + new OrderItem(getQuantity()).toString();
+        Order order = new Order();
 
-        System.out.println(s);
+        order.setSss(product1.toString() + new OrderItem(getQuantity()).toString());
+
+        System.out.println(order.getSss());
 
 
     }
@@ -52,11 +49,11 @@ public class OrderItem extends Order{
         this.quantity = quantity;
     }
 
-    public String getS() {
-        return s;
-    }
+   // public String getS() {
+     //   return s;
+    //}
 
-    public void setS(String s) {
-        this.s = s;
-    }
+    //public void setS(String s) {
+    //    this.s = s;
+   // }
 }

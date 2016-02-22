@@ -9,8 +9,11 @@ public class Order extends BaseEntity{
     private String deliveryAdress;
     private Double total;
     private Date date;
-    List<String> products = new ArrayList<String>();
+    private Double findedPrice;
+    private String sss;
 
+    public Order() {
+    }
 
     public boolean isAcceptedOrder() {
         return acceptedOrder;
@@ -28,23 +31,46 @@ public class Order extends BaseEntity{
         this.deliveryAdress = deliveryAdress;
     }
 
+    public String getSss() {
+        return sss;
+    }
 
+    public void setSss(String sss) {
+        this.sss = sss;
+    }
 
     public void createOrderItemList() {
+        Order order = new Order();
+        System.out.println(order.getSss());
 
-        OrderItem orderItem = new OrderItem();
+       /* List<String> products = new ArrayList<String>();
 
         products.add(orderItem.getS());
 
         for (String product : products) {
             System.out.println(product);
-        }
+        }*/
+
     }
 
-    public double countTotalSum(){
-        for (String product:products
-             ) {
+   public void findPrice(){
 
-        }return 0.0;
+
+       //OrderItem item = new OrderItem();System.out.println(item.getS());
+       /*String res="";
+        String [] arr;
+        arr = item.getS().split("");
+       for (int i=0; i<arr.length; i++){
+            if (item.getS().startsWith("price=", i)) {res = arr[i+6];
+                for (int j=0; j<10; j++){
+                    if (!arr[i+6+j].matches(",")) {
+                        res = res + arr[i+6+j];
+                    } else break;
+                }
+            }
+        }*/
+       //System.out.println(res);
     }
+
+
 }

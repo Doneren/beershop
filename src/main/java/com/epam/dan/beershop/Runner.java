@@ -1,5 +1,6 @@
 package com.epam.dan.beershop;
 
+import com.epam.dan.beershop.model.Order;
 import com.epam.dan.beershop.model.OrderItem;
 
 public class Runner {
@@ -12,6 +13,14 @@ public class Runner {
 
         newList.createProductList();
 
-        newList.createOrderItemList();
+        //System.out.println(newList.getS());
+
+
+
+        Order order = new Order();
+
+        order.createOrderItemList();
+
+        order.findPrice();
     }
 }
